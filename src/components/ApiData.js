@@ -1,21 +1,28 @@
 import { useEffect } from "react";
 
 function ApiData() {
-  function fetchData() {
+  let selectedLocations = [5, 4, 7];
+  let locations = [];
+
+  function printLocations() {
+    selectedLocations.forEach((locationID) => {
+      console.log(locations[locationID]);
+    });
+  }
+
+  function getLocations() {
     fetch(
       `https://data.goteborg.se/RiverService/v1.1/MeasureSites/${process.env.REACT_APP_APIKEY}?format=Json`
     )
       .then((response) => response.json())
       .then((data) => {
-        data.forEach((key) => {
-          console.log(key.Description);
-          // console.log(key.MeasureParameters[2]);
-        });
+        locations = data;
+        printLocations();
       });
   }
 
   useEffect(() => {
-    fetchData();
+    getLocations();
   });
 
   return <p>Hello World!</p>;
