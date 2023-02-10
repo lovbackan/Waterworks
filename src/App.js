@@ -1,9 +1,13 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import ApiData from "./components/ApiData";
+import Chart from "./components/Chart";
 
 function App() {
-  return <ApiData />;
+  return(
+    <ApiData />,
+    <Chart />
+    );
 }
 
 export default App;
