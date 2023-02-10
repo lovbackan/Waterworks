@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 
 //For getting Level from single location
-// `https://data.goteborg.se/RiverService/v1.1/Measurements/${process.env.REACT_APP_APIKEY}/MolndalCentrum/Level?format=Json`
+// `https://data.goteborg.se/RiverService/v1.1/Measurements/${process.env.REACT_APP_APIKEY}/MolndalCentrum/Level/2020-04-22/2020-05-31?format=Json`
 //Level or Flow
 
  //For single location now
