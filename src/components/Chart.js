@@ -37,7 +37,7 @@ export const data = {
 
 export default function ChartPrint() {
   return (
-    <div className="App">
+    <div className="chart-container">
       <Line options={options} data={data} />
     </div>
   );
