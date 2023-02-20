@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import Circle from "./Circle";
 import "./Progress.css";
@@ -7,12 +6,11 @@ const ProgressBar = () => {
   const [circle] = useState(4);
   const [active, setActive] = useState(0);
   const [width, setWidth] = useState(0);
-  // något är fel här
   useEffect(() => {
     setWidth((100 / (circle - 1)) * active);
-  }, [circle.active]);
+    console.log(active);
+  }, [circle, active]);
 
-  console.log(active);
   const arr = [];
   for (let i = 0; i < circle; i++) {
     arr.push(
