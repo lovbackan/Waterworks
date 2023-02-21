@@ -26,6 +26,7 @@ function App() {
       <HeroSection />
       <Chart data={data} />
       <ProgressBar setFetchParameters={setFetchParameters} />
+      <Main />
     </div> /* ,
     (<ApiData />) , (<Chart />) */
   );
