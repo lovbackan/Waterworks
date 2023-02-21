@@ -4,7 +4,7 @@ import CheckBox from "./CheckBox";
 import DatePicker from "./DatePicker";
 import "./Progress.css";
 
-const ProgressBar = () => {
+const ProgressBar = ({ setFetchParameters }) => {
   const [circle] = useState(3);
   const [active, setActive] = useState(0);
   const [width, setWidth] = useState(0);
@@ -99,7 +99,7 @@ const ProgressBar = () => {
             className="btn"
             disabled={active >= 2 && stations.length > 0 ? false : true}
             onClick={() => {
-              console.log(data);
+              setFetchParameters(data);
             }}
           >
             Submit

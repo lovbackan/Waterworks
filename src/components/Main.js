@@ -1,15 +1,9 @@
 import React from "react";
-import ProgressBar from "./ProgressBar";
 
 import "../Main.css";
 
 function Main() {
-  return (
-    <div className="Main">
-      {/* progressbar */}
-      <ProgressBar />
-    </div>
-  );
+  return <div className="Main">{/* progressbar */}</div>;
 }
 
 export default Main;
