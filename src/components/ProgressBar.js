@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import Circle from "./Circle";
+// import CheckBox from "./CheckBox";
+// import DatePicker from "./DatePicker";
 import "./Progress.css";
 
 const ProgressBar = () => {
+  // const [steps] = useState([<DatePicker />, <DatePicker />, <CheckBox />]);
   const [circle] = useState(4);
   const [active, setActive] = useState(0);
   const [width, setWidth] = useState(0);

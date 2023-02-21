@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const CheckBox = (props) => {
+const CheckBox = (props) => {
   const [checkedItems, setCheckedItems] = useState([]); // initialize an empty array to store checked items
 
   const handleChange = (e) => {
@@ -61,3 +61,5 @@ export const CheckBox = (props) => {
     </div>
   );
 };
+
+export default CheckBox;

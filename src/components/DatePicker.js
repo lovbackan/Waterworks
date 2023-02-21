@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-export const DatePicker = (props) => {
+const DatePicker = (props) => {
   const [date, setDate] = useState("");
   const dateInputRef = useRef(null);
 
@@ -24,3 +24,5 @@ export const DatePicker = (props) => {
     </div>
   );
 };
+
+export default DatePicker;
