@@ -4,6 +4,7 @@ import ApiData from "./components/ApiData";
 import Header from "./components/Header";
 import Chart from "./components/Chart";
 import Main from "./components/Main";
+import HeroSection from "./components/HeroSection";
 // import { CheckBox } from "./components/CheckBox";
 // import { DatePicker } from "./components/DatePicker";
 // import Cricle from "./components/Circle";
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <ApiData />
+      <HeroSection />
       <Chart />
       <Main />
     </div> /* ,

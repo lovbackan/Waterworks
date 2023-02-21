@@ -9,4 +9,30 @@
   margin-bottom: 1em;
   background-color: #419b9a;
   color: #fff;
+
+  /*Sticky*/
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.Title {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.Title h1 {
+  justify-self: flex-start;
+  margin: 0;
+}
+
+.Title div {
+  justify-self: flex-end;
+}
+
+.Title svg {
+  justify-self: center;
 }
