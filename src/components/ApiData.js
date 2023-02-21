@@ -2,9 +2,14 @@ import { wait } from "@testing-library/user-event/dist/utils";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function ApiData({setData}) {
+function ApiData(props) {
+  const setData = props.setData;
+  const fetchParameters = props.fetchParameters;
+  const startDate = fetchParameters.startDate;
+  const endDate = fetchParameters.endDate;
+  const selectedStations = fetchParameters.stations;
 
-  let selectedStations = [5, 4, 1]; //Only for testing purposes. 
+
   let stations = []; //Contains all available stations after fetch.
   
   //Returns promise with 2dArray[station][day]
@@ -34,11 +39,12 @@ function ApiData({setData}) {
   }
   //Shouldn't really be part of useEffect. Left this here for testing and to show how the functions work together
   useEffect(() => {
+    console.log(fetchParameters);
     getStations()
     .then((result) =>{
       stations = result;
       console.log(stations);
-      getSelectedStationsData(selectedStations, "2022-05-05", "2022-06-05")
+      getSelectedStationsData(selectedStations, startDate, endDate)
       .then((results) => setData(results));
     })
   },[]);
