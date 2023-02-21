@@ -6,6 +6,7 @@ import Chart from "./components/Chart";
 import Main from "./components/Main";
 import { useState } from "react";
 
+
 function App() {
   const [data, setData] = useState(null);
   console.log(data);
