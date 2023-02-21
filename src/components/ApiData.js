@@ -12,6 +12,16 @@ function ApiData(props) {
 
   let stations = []; //Contains all available stations after fetch.
   
+
+  console.log(fetchParameters);
+  getStations()
+  .then((result) =>{
+    stations = result;
+    console.log(stations);
+    getSelectedStationsData(selectedStations, startDate, endDate)
+    .then((results) => setData(results));
+  })
+
   //Returns promise with 2dArray[station][day]
   function getSelectedStationsData(stationIDs, startDate, endDate) //StationIDs = array of IDs, Dates = YYYY-MM-DD
   { 
@@ -37,17 +47,7 @@ function ApiData(props) {
       });
     })
   }
-  //Shouldn't really be part of useEffect. Left this here for testing and to show how the functions work together
-  useEffect(() => {
-    console.log(fetchParameters);
-    getStations()
-    .then((result) =>{
-      stations = result;
-      console.log(stations);
-      getSelectedStationsData(selectedStations, startDate, endDate)
-      .then((results) => setData(results));
-    })
-  },[]);
+
 
   //Dates in format YYYY-MM-DD. Returns array where each element = one day
   function getStationData(station, startDate, endDate)
