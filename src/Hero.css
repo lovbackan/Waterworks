@@ -1,5 +1,9 @@
+.Hero-section {
+  padding-top: 3rem;
+}
+
 .Hero-image-container {
-  width: auto;
+  width: 100%;
 }
 
 .Hero-image {

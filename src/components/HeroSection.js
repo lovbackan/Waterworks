@@ -10,8 +10,8 @@ function ResponsiveImage() {
   return (
     <img
       className="Hero-image"
-      srcSet={`${HeroWaterWorks_mobile} 360w, ${HeroWaterWorks_large_device} 768w, ${HeroWaterWorks_large_tablet} 1200w, ${HeroWaterWorks_desktop} 1920w, `}
-      src={HeroWaterWorks_large_device}
+      srcset={`${HeroWaterWorks_mobile} 360w, ${HeroWaterWorks_large_device} 768w, ${HeroWaterWorks_large_tablet} 1200w, ${HeroWaterWorks_desktop} 1920w`}
+      src={HeroWaterWorks_mobile}
       sizes="(max-width: 360px) 360px, (max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
       alt="the Mölndal Rapids"
     />
@@ -20,9 +20,9 @@ function ResponsiveImage() {
 
 function HeroSection() {
   return (
-    <div className="Hero-section">
+    <section className="Hero-section">
       <div className="Hero-image-container">{ResponsiveImage()}</div>
-    </div>
+    </section>
   );
 }
 

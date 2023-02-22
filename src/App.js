@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Chart from "./components/Chart";
 import { useState } from "react";
 import ProgressBar from "./components/ProgressBar";
-import Main from "./components/Main";
+// import Main from "./components/Main";
 import HeroSection from "./components/HeroSection";
 // import { CheckBox } from "./components/CheckBox";
 // import { DatePicker } from "./components/DatePicker";
@@ -26,7 +26,7 @@ function App() {
       <HeroSection />
       <Chart data={data} fetchParameters={fetchParameters} />
       <ProgressBar setFetchParameters={setFetchParameters} />
-      <Main />
+      {/* <Main /> */}
     </div> /* ,
     (<ApiData />) , (<Chart />) */
   );
