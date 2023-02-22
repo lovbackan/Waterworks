@@ -29,7 +29,7 @@ const CheckBox = (props) => {
           value="1"
           onChange={handleChange}
         />
-        Station 1
+        Arketjärn
       </label>
       <label>
         <input
@@ -38,7 +38,7 @@ const CheckBox = (props) => {
           value="2"
           onChange={handleChange}
         />
-        Station 2
+        Eriksberg
       </label>
       <label>
         <input
@@ -47,7 +47,7 @@ const CheckBox = (props) => {
           value="3"
           onChange={handleChange}
         />
-        Station 3
+        Gårda dämme
       </label>
       <label>
         <input
@@ -56,7 +56,7 @@ const CheckBox = (props) => {
           value="4"
           onChange={handleChange}
         />
-        Station 4
+        Härsjö dämme
       </label>
     </div>
   );

@@ -39,7 +39,7 @@ const ProgressBar = ({ setFetchParameters }) => {
 
   const arr = [];
   const arrInfo = [];
-  const stepInfo = ["Start", "End", "Place"];
+  const stepInfo = ["Start Date", "End date", "Stations"];
   for (let i = 0; i < circle; i++) {
     arr.push(
       <Circle classname={i <= active ? "circle active" : "circle"} key={i}>
