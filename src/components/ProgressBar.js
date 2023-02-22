@@ -33,7 +33,6 @@ const ProgressBar = ({ setFetchParameters }) => {
   };
 
   useEffect(() => {
-    console.log(active);
     setWidth((100 / (circle - 1)) * active);
   }, [circle, active]);
 

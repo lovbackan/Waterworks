@@ -5,11 +5,7 @@ import Header from "./components/Header";
 import Chart from "./components/Chart";
 import { useState } from "react";
 import ProgressBar from "./components/ProgressBar";
-// import Main from "./components/Main";
 import HeroSection from "./components/HeroSection";
-// import { CheckBox } from "./components/CheckBox";
-// import { DatePicker } from "./components/DatePicker";
-// import Cricle from "./components/Circle";
 
 function App() {
   const [fetchParameters, setFetchParameters] = useState({
@@ -26,9 +22,7 @@ function App() {
       <HeroSection />
       <Chart data={data} fetchParameters={fetchParameters} />
       <ProgressBar setFetchParameters={setFetchParameters} />
-      {/* <Main /> */}
-    </div> /* ,
-    (<ApiData />) , (<Chart />) */
+    </div>
   );
 }
 
