@@ -21,7 +21,7 @@ const CheckBox = (props) => {
   };
 
   return (
-    <div>
+    <div className="contentWrapper">
       <label>
         <input
           type="checkbox"

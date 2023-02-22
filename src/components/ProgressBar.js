@@ -39,7 +39,7 @@ const ProgressBar = ({ setFetchParameters }) => {
 
   const arr = [];
   const arrInfo = [];
-  const stepInfo = ["Start Date", "End Date", "Stations"];
+  const stepInfo = ["Start", "End", "Place"];
   for (let i = 0; i < circle; i++) {
     arr.push(
       <Circle classname={i <= active ? "circle active" : "circle"} key={i}>
@@ -65,49 +65,51 @@ const ProgressBar = ({ setFetchParameters }) => {
   }
 
   return (
-    <div className="container">
-      <div className="content">
-        <div className="stepInfoContainer">{arrInfo}</div>
+    <section className="progressSection">
+      <div className="container">
+        <div className="content">
+          <div className="stepInfoContainer">{arrInfo}</div>
 
-        <div className="progressbar">
-          <div className="progress" style={{ width: width + "%" }}></div>
-          {arr}
-        </div>
-        <div className="button">
-          <button
-            className="prev btn"
-            disabled={active > 0 ? false : true}
-            onClick={() => {
-              active <= 0 ? setActive(0) : setActive(active - 1);
-            }}
-          >
-            Prev
-          </button>
-          <button
-            className="next btn"
-            disabled={active >= circle - 1 ? true : false}
-            onClick={() => {
-              if (controller) {
-                active >= circle ? setActive(circle) : setActive(active + 1);
-              }
-            }}
-          >
-            Next
-          </button>
+          <div className="progressbar">
+            <div className="progress" style={{ width: width + "%" }}></div>
+            {arr}
+          </div>
+          <div className="button">
+            <button
+              className="prev btn"
+              disabled={active > 0 ? false : true}
+              onClick={() => {
+                active <= 0 ? setActive(0) : setActive(active - 1);
+              }}
+            >
+              Prev
+            </button>
+            <button
+              className="next btn"
+              disabled={active >= circle - 1 ? true : false}
+              onClick={() => {
+                if (controller) {
+                  active >= circle ? setActive(circle) : setActive(active + 1);
+                }
+              }}
+            >
+              Next
+            </button>
 
-          <button
-            className="btn"
-            disabled={active >= 2 && stations.length > 0 ? false : true}
-            onClick={() => {
-              setFetchParameters(data);
-            }}
-          >
-            Submit
-          </button>
+            <button
+              className="btn"
+              disabled={active >= 2 && stations.length > 0 ? false : true}
+              onClick={() => {
+                setFetchParameters(data);
+              }}
+            >
+              Submit
+            </button>
+          </div>
+          {form}
         </div>
-        {form}
       </div>
-    </div>
+    </section>
   );
 };
 

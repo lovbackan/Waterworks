@@ -13,14 +13,14 @@ const DatePicker = (props) => {
   };
 
   return (
-    <div>
+    <div className="contentWrapper">
       <input
         type="date"
         onChange={handleChange}
         ref={dateInputRef}
         // value={date}
       />
-      <p>Selected Date: {date}</p>
+      {/* <p>Selected Date: {date}</p> */}
     </div>
   );
 };
