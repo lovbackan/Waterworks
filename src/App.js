@@ -20,8 +20,10 @@ function App() {
       <Header />
       <ApiData setData={setData} fetchParameters={fetchParameters} />
       <HeroSection />
-      <Chart data={data} fetchParameters={fetchParameters} />
-      <ProgressBar setFetchParameters={setFetchParameters} />
+      <section className="chartAndProgress">
+        <Chart data={data} fetchParameters={fetchParameters} />
+        <ProgressBar setFetchParameters={setFetchParameters} />
+      </section>
     </div>
   );
 }

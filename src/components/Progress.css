@@ -1,15 +1,15 @@
 .progressSection {
   background-color: #80c6af;
+  height: 26vh;
 }
 
 .container {
   margin: 0;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
   width: 100vw;
 }
 
@@ -23,6 +23,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 14px;
+  color: white;
+  font-weight: lighter;
 }
 
 .progressbar {
@@ -82,8 +85,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
 }
 
 .btn {
@@ -119,7 +122,7 @@
   justify-content: center;
   align-items: center;
   background-color: #419b9a;
-  height: 60px;
+  height: 40px;
   border-radius: 5px;
   font-size: smaller;
 }

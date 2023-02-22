@@ -8,6 +8,11 @@
   pointer-events: none;
 }
 
+.chartAndProgress {
+  height: 100vh - 3rem;
+  width: 100vw;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -30,7 +35,7 @@
 }
 
 .Chart-wrapper {
-  height: 50%;
+  height: 65vh;
 }
 
 @keyframes App-logo-spin {
