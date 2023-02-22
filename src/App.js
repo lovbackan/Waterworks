@@ -13,9 +13,9 @@ import HeroSection from "./components/HeroSection";
 
 function App() {
   const [fetchParameters, setFetchParameters] = useState({
-    startDate: "2015-04-11",
-    endDate: "2016-04-12",
-    stations: [3, 5, 6],
+    startDate: "2023-02-01",
+    endDate: "2023-02-10",
+    stations: [1, 2, 3, 4],
   });
   const [data, setData] = useState(null);
   console.log(data);
@@ -24,7 +24,7 @@ function App() {
       <Header />
       <ApiData setData={setData} fetchParameters={fetchParameters} />
       <HeroSection />
-      <Chart data={data} />
+      <Chart data={data} fetchParameters={fetchParameters} />
       <ProgressBar setFetchParameters={setFetchParameters} />
       <Main />
     </div> /* ,
