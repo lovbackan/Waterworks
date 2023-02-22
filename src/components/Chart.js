@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "top",
@@ -67,7 +68,7 @@ const ChartPrint = (props) => {
     };
 
     return (
-      <div className="App">
+      <div className="Chart-wrapper">
         <Line options={options} data={chartData} />
       </div>
     );
