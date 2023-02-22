@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -9,24 +10,45 @@ function ApiData(props) {
   const endDate = fetchParameters.endDate;
   const selectedStations = fetchParameters.stations;
 
+  const [stations, setStations] = useState();
+  const [oldFetchParameters, setOldFetchParameters] = useState(); 
 
-  let stations = []; //Contains all available stations after fetch.
+  if(stations === undefined)
+  {
+    console.log("fetchi");
+    setStations("fetching");
+    getStations()
+    .then((result) =>{
+      console.log("fetching done!");
+      setStations(result);
+      setOldFetchParameters(fetchParameters);
+      let tempStations = result;
+      getSelectedStationsData(selectedStations, startDate, endDate, tempStations)
+      .then((results) => setData(results));
+    })
+  } else if(stations !== "fetching" && fetchParameters !== oldFetchParameters)
+  {
+    setOldFetchParameters(fetchParameters);
+    getSelectedStationsData(selectedStations, startDate, endDate, stations)
+    .then((results) => setData(results));
+  }
+
+    
+  
+  
+  // let stations = [];
+
   
 
-  console.log(fetchParameters);
-  getStations()
-  .then((result) =>{
-    stations = result;
-    console.log(stations);
-    getSelectedStationsData(selectedStations, startDate, endDate)
-    .then((results) => setData(results));
-  })
+  
+  
+  
 
   //Returns promise with 2dArray[station][day]
-  function getSelectedStationsData(stationIDs, startDate, endDate) //StationIDs = array of IDs, Dates = YYYY-MM-DD
+  function getSelectedStationsData(stationIDs, startDate, endDate, stationsArray) //StationIDs = array of IDs, Dates = YYYY-MM-DD
   { 
     return new Promise((resolve) => { Promise.all(stationIDs.map((stationID) => {
-      return getStationData(stations[stationID].Code, startDate, endDate)
+      return getStationData(stationsArray[stationID].Code, startDate, endDate)
     })).then((results) => {
       resolve(results);
     });
@@ -42,7 +64,6 @@ function ApiData(props) {
       .then((response) => response.json())
       .then((data) => {
         resolve(data);
-        // Stations = data;
         // getSelectedStationsData(selectedStations, "2020-09-09", "2021-09-09");
       });
     })
