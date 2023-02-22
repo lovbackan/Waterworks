@@ -10,7 +10,7 @@ const options = {
     },
     title: {
       display: true,
-      text: "Waterworks chart",
+      text: "Fors chart - Level in meters (RH2000)",
     },
   },
 };
@@ -22,7 +22,13 @@ const rgbColors = [
   "rgb(0,255,255)",
 ];
 
-const ChartPrint = ({ data }) => {
+const stationNames = ["Arketjärn", "Eriksberg", "Gårda dämme", "Härsjö dämme"];
+
+const ChartPrint = (props) => {
+  const data = props.data;
+  const params = props.fetchParameters;
+  const selectedStations = params.stations;
+
   if (data != null) {
     const labels = [];
     const datasets = [];
@@ -47,10 +53,10 @@ const ChartPrint = ({ data }) => {
       });
 
       const datasetTemplate = {
-        label: `Nivå ${i + 1}`,
+        label: stationNames[selectedStations[i] - 1],
         data: dataResult,
         borderColor: rgbColors[i],
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        backgroundColor: rgbColors[i],
       };
       datasets.push(datasetTemplate);
     }
