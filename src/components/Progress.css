@@ -1,6 +1,6 @@
 .progressSection {
   background-color: #80c6af;
-  height: 26vh;
+  height: 24.5vh;
   display: flex;
   justify-content: center;
 }
@@ -92,7 +92,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn {

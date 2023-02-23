@@ -5,10 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
+  align-content: center;
+  flex-wrap: wrap;
   padding: 1em;
   margin-bottom: 1em;
   background-color: #419b9a;
   color: #fff;
+  height: 60px;
 
   /*Sticky*/
   position: fixed;
@@ -27,6 +30,7 @@
 .Title h1 {
   justify-self: flex-start;
   margin: 0;
+  font-size: 36px;
 }
 
 .Title div {
@@ -35,4 +39,5 @@
 
 .Title svg {
   justify-self: center;
+  scale: 1.3;
 }

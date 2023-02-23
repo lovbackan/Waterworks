@@ -18,10 +18,29 @@ function ResponsiveImage() {
   );
 }
 
+function scrollToBottom() {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: "smooth",
+  });
+}
+
 function HeroSection() {
   return (
     <section className="Hero-section">
-      <div className="Hero-image-container">{ResponsiveImage()}</div>
+      <div className="Hero-image-container">
+        {ResponsiveImage()}
+        <div className="Hero-image-text-container">
+          <div className="Hero-text">
+            <h1>Welcome to Fors!</h1>
+            <h1>Your data source</h1>
+            <h1>for Mölndalsån</h1>
+          </div>
+        </div>
+        <div className="Hero-button" onClick={scrollToBottom}>
+          Start
+        </div>
+      </div>
     </section>
   );
 }

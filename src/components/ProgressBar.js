@@ -96,7 +96,7 @@ const ProgressBar = ({ setFetchParameters }) => {
             </button>
 
             <button
-              className="btn"
+              className="btn submit"
               disabled={active >= 2 && stations.length > 0 ? false : true}
               onClick={() => {
                 setFetchParameters(data);
