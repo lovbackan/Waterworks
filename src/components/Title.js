@@ -1,5 +1,5 @@
 import React from "react";
-import Hamburger_placeholder from "../assets/Hamburger_placeholder.png";
+// import Hamburger_placeholder from "../assets/Hamburger_placeholder.png";
 
 function Title() {
   return (
@@ -43,7 +43,7 @@ function Title() {
         />
       </svg>
       <div>
-        <img src={Hamburger_placeholder} alt="Placeholder for hamburger menu" />
+        {/* <img src={Hamburger_placeholder} alt="Placeholder for hamburger menu" /> */}
       </div>
     </div>
   );
