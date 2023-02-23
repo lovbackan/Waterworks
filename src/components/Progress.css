@@ -1,6 +1,8 @@
 .progressSection {
   background-color: #80c6af;
   height: 26vh;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -10,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
 }
 
 .content {
@@ -26,7 +28,7 @@
   font-size: 14px;
   color: white;
   font-weight: lighter;
-  margin: 20px;
+  /* margin: 0 20px 0 20px; */
 }
 
 .progressbar {
@@ -35,7 +37,7 @@
   align-items: center;
   position: relative;
   color: black;
-  margin: 20px;
+  /* margin: 0 20px 0 20px; */
 }
 
 .progressbar::before {
@@ -50,6 +52,7 @@
   width: 100%;
   z-index: 1;
   transition: 0.4s ease;
+  /* margin: 0 20px 0 20px; */
 }
 
 .progress {
@@ -63,7 +66,7 @@
   width: 50%;
   z-index: 1;
   transition: 0.4s ease;
-  margin: 20px;
+  /* margin: 0 20px 0 20px; */
 }
 
 .circle {
@@ -88,8 +91,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn {
